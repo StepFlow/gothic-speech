@@ -1,0 +1,38 @@
+{% extends "layouts/base.njk" %}
+
+{% block head %}
+  <link rel="stylesheet" href="/css/media.css" />
+{% endblock %}
+
+{% block content %}
+  {# <h2>{{ dialogs[key] | debug | safe }}</h2> #}
+
+  <table>
+    <thead>
+      <tr>
+        <th>{{ "Hero" }}</th>
+        <th>{{ "Text" }}</th>
+        <th>{{ "Audio" }}</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for line in dialog.lines %}
+        <tr>
+          <td>
+            {{ "Me" if line.sender == "self" else (dialog.name if dialog.name else "Him") }}
+          </td>
+
+          <td>{{ line.text }}</td>
+
+          <td>
+            <audio controls="controls" preload="none">
+              <source src="{{ storageUrl + line.audio | upper + '.m4a' }}" type="audio/mp4">
+            </audio>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layouts/base.njk" %}
+
+{% block head %}
+  <link rel="stylesheet" href="/css/media.css" />
+{% endblock %}
+
+{% block content %}
+  <ul>
+    {% for dialog in dialogs %}
+      <li>
+          <a href="/dialogs/{{ dialog.id }}/">
+            {{ dialog.name if dialog.name else dialog.id }}
+          </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

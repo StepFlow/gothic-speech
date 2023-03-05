@@ -1,0 +1,22 @@
+{
+  "name": "gothic-speech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "autoprefixer": "^10.4.13",
+    "esbuild": "^0.17.11",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.21",
+    "postcss-csso": "^6.0.1",
+    "postcss-import": "^15.1.0",
+    "postcss-media-minmax": "^5.0.0"
+  }
+}

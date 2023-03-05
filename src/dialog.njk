@@ -1,0 +1,11 @@
+---
+layout: "layouts/dialog.njk"
+pagination:
+  data: dialogs
+  size: 1
+  alias: dialog
+permalink: "dialogs/{{ dialog.id }}/"
+storageUrl: https://storage.googleapis.com/gothic_speech_english/
+eleventyComputed:
+  title: "{{ dialog.name }}"
+---
