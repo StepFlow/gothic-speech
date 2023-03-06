@@ -7,6 +7,25 @@
 {% block content %}
   {# <h2>{{ dialogs[key] | debug | safe }}</h2> #}
 
+  <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 4px 8px;
+    }
+
+    audio {
+      display: block;
+    }
+  </style>
+
   <table>
     <thead>
       <tr>
