@@ -6,6 +6,7 @@ const autoprefixer = require("autoprefixer");
 const postcssCsso = require("postcss-csso");
 const esbuild = require("esbuild");
 const htmlmin = require("html-minifier");
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function (config) {
   config.addTransform("html-minify", (content, path) => {
@@ -70,6 +71,8 @@ module.exports = function (config) {
   });
 
   config.addFilter("debug", (content) => `<pre>${inspect(content)}</pre>`);
+
+  config.addPlugin(EleventyHtmlBasePlugin);
 
   return {
     dir: {
